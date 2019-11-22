@@ -5,10 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.trackmysleepquality.R
 import com.example.android.trackmysleepquality.database.SleepNight
-import com.example.android.trackmysleepquality.convertDurationToFormatted
-import com.example.android.trackmysleepquality.convertNumericQualityToString
 import com.example.android.trackmysleepquality.databinding.ListItemSleepNightBinding
 
 class SleepNightAdapter : ListAdapter<SleepNight, SleepNightAdapter.ViewHolder>(SleepNightDiffCallback()) {
@@ -33,19 +30,8 @@ class SleepNightAdapter : ListAdapter<SleepNight, SleepNightAdapter.ViewHolder>(
         }
 
         fun bind(night: SleepNight) {
-            val res = itemView.context.resources
-
-            binding.sleepLength.text = convertDurationToFormatted(night.startTimeMilli, night.endTimeMilli, res)
-            binding.qualityString.text = convertNumericQualityToString(night.sleepQuality, res)
-            binding.qualityImage.setImageResource(when (night.sleepQuality) {
-                0 -> R.drawable.ic_sleep_0
-                1 -> R.drawable.ic_sleep_1
-                2 -> R.drawable.ic_sleep_2
-                3 -> R.drawable.ic_sleep_3
-                4 -> R.drawable.ic_sleep_4
-                5 -> R.drawable.ic_sleep_5
-                else -> R.drawable.ic_sleep_active
-            })
+            binding.sleep = night
+            binding.executePendingBindings() // works with binding adapters (see BindingUtils.kt)
         }
 
     }

@@ -8,6 +8,9 @@ import com.example.android.trackmysleepquality.convertDurationToFormatted
 import com.example.android.trackmysleepquality.convertNumericQualityToString
 import com.example.android.trackmysleepquality.database.SleepNight
 
+// Binding adapters take care of all the work of formatting and updating the views as the data changes,
+// simplifying the ViewHolder and giving the code much better structure than it had before.
+
 @BindingAdapter("sleepDurationFormatted")
 fun TextView.setSleepDurationFormatted(night: SleepNight) {
     text = convertDurationToFormatted(night.startTimeMilli, night.endTimeMilli, context.resources)
