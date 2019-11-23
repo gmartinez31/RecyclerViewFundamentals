@@ -25,7 +25,7 @@
       </configuration>
     </facet>
     <facet type="kotlin-language" name="Kotlin">
-      <configuration version="3" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false" pureKotlinSourceFolders="$MODULE_DIR$/src/debug/kotlin;/Users/goose/Desktop/android-kotlin-fundamentals-starter-apps-master/RecyclerViewFundamentals/app/src/debug/java;/Users/goose/Desktop/android-kotlin-fundamentals-starter-apps-master/RecyclerViewFundamentals/app/src/release/kotlin;/Users/goose/Desktop/android-kotlin-fundamentals-starter-apps-master/RecyclerViewFundamentals/app/src/release/java;/Users/goose/Desktop/android-kotlin-fundamentals-starter-apps-master/RecyclerViewFundamentals/app/src/debugAndroidTest/kotlin;/Users/goose/Desktop/android-kotlin-fundamentals-starter-apps-master/RecyclerViewFundamentals/app/src/debugUnitTest/kotlin;/Users/goose/Desktop/android-kotlin-fundamentals-starter-apps-master/RecyclerViewFundamentals/app/src/releaseUnitTest/kotlin">
+      <configuration version="3" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false">
         <compilerSettings />
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/build/tmp/kotlin-classes/debug" />
