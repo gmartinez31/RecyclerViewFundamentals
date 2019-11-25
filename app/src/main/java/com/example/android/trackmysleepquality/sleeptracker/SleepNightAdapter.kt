@@ -56,3 +56,20 @@ class SleepNightListener(val clickListener: (sleepId: Long) -> Unit) {
 
     fun onClick(night: SleepNight) = clickListener(night.nightId)
 }
+
+/*
+ closed class meaning all subclasses of this class must be defined here in this file. As a result the number of subclasses is known to the compiler
+ */
+sealed class DataItem {
+
+    abstract val id: Long
+
+    data class SleepNightItem(val sleepNight: SleepNight) : DataItem() {
+        override val id = sleepNight.nightId
+    }
+
+    //not a class b/c it has no actual data
+    object Header: DataItem() {
+        override val id = Long.MIN_VALUE
+    }
+}
